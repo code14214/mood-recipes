@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Labels Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50 min-h-screen p-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Dietary Labels Test</h1>
+        
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h2 class="text-xl font-semibold mb-4">Test Recipe Display</h2>
+            
+            <div class="text-center mb-6">
+                <h3 id="recipeTitle" class="text-2xl font-bold text-gray-800 mb-2">Loading...</h3>
+                <div class="flex justify-center items-center gap-4 text-sm text-gray-600">
+                    <span id="recipePrepTime" class="flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </span>
+                    <span id="recipeDifficulty" class="px-2 py-1 rounded-full text-xs font-medium"></span>
+                    <span id="recipeDietary" class="px-2 py-1 rounded-full text-xs font-medium"></span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4">
+                <button onclick="testRecipe('refreshed')" class="bg-blue-500 text-white p-3 rounded">Test Refreshed</button>
+                <button onclick="testRecipe('excited')" class="bg-red-500 text-white p-3 rounded">Test Excited</button>
+                <button onclick="testRecipe('sad')" class="bg-gray-500 text-white p-3 rounded">Test Sad</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const recipeTitle = document.getElementById('recipeTitle');
+        const recipePrepTime = document.getElementById('recipePrepTime');
+        const recipeDifficulty = document.getElementById('recipeDifficulty');
+        const recipeDietary = document.getElementById('recipeDietary');
+
+        async function testRecipe(mood) {
+            try {
+                const response = await fetch(`http://localhost:3000/api/recipes/${mood}`);
+                const recipe = await response.json();
+                
+                // Update recipe title and metadata
+                recipeTitle.textContent = recipe.name;
+                recipePrepTime.textContent = `${recipe.prep_time} minutes`;
+                
+                // Set difficulty badge
+                const difficultyColors = {
+                    'easy': 'bg-green-100 text-green-800',
+                    'medium': 'bg-yellow-100 text-yellow-800',
+                    'hard': 'bg-red-100 text-red-800'
+                };
+                recipeDifficulty.className = `px-2 py-1 rounded-full text-xs font-medium ${difficultyColors[recipe.difficulty] || 'bg-gray-100 text-gray-800'}`;
+                recipeDifficulty.textContent = recipe.difficulty;
+                
+                // Set dietary badge
+                const dietaryColors = {
+                    'vegan': 'bg-green-100 text-green-800',
+                    'vegetarian': 'bg-blue-100 text-blue-800',
+                    'meat': 'bg-red-100 text-red-800'
+                };
+                const dietaryLabels = {
+                    'vegan': '🌱 Vegan',
+                    'vegetarian': '🥬 Vegetarian',
+                    'meat': '🥩 Contains Meat'
+                };
+                recipeDietary.className = `px-2 py-1 rounded-full text-xs font-medium ${dietaryColors[recipe.dietary] || 'bg-gray-100 text-gray-800'}`;
+                recipeDietary.textContent = dietaryLabels[recipe.dietary] || recipe.dietary;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                recipeTitle.textContent = 'Error loading recipe';
+            }
+        }
+
+        // Test with refreshed mood on load
+        testRecipe('refreshed');
+    </script>
+</body>
+</html> 

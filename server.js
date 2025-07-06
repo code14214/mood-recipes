@@ -24,7 +24,8 @@ db.serialize(() => {
     instructions TEXT NOT NULL,
     mood TEXT NOT NULL,
     prep_time INTEGER,
-    difficulty TEXT
+    difficulty TEXT,
+    dietary TEXT
   )`);
 
   // Insert sample recipes for different moods
@@ -35,7 +36,8 @@ db.serialize(() => {
       instructions: "1. Cook macaroni\n2. Make cheese sauce\n3. Combine and bake",
       mood: "sad",
       prep_time: 30,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegetarian"
     },
     {
       name: "Energizing Smoothie Bowl",
@@ -43,7 +45,8 @@ db.serialize(() => {
       instructions: "1. Blend fruits with yogurt\n2. Top with granola and seeds",
       mood: "happy",
       prep_time: 10,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegetarian"
     },
     {
       name: "Spicy Chicken Tacos",
@@ -51,7 +54,8 @@ db.serialize(() => {
       instructions: "1. Season and cook chicken\n2. Warm tortillas\n3. Assemble tacos",
       mood: "excited",
       prep_time: 25,
-      difficulty: "medium"
+      difficulty: "medium",
+      dietary: "meat"
     },
     {
       name: "Calming Chamomile Tea Cookies",
@@ -59,7 +63,8 @@ db.serialize(() => {
       instructions: "1. Mix ingredients\n2. Shape cookies\n3. Bake until golden",
       mood: "anxious",
       prep_time: 45,
-      difficulty: "medium"
+      difficulty: "medium",
+      dietary: "vegetarian"
     },
     {
       name: "Cozy Chicken Soup",
@@ -67,7 +72,8 @@ db.serialize(() => {
       instructions: "1. Simmer chicken and vegetables\n2. Add noodles\n3. Season to taste",
       mood: "sick",
       prep_time: 60,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "meat"
     },
     {
       name: "Chocolate Lava Cake",
@@ -75,7 +81,8 @@ db.serialize(() => {
       instructions: "1. Melt chocolate and butter\n2. Mix ingredients\n3. Bake until edges are set",
       mood: "romantic",
       prep_time: 20,
-      difficulty: "medium"
+      difficulty: "medium",
+      dietary: "vegetarian"
     },
     {
       name: "Fresh Garden Salad",
@@ -83,7 +90,8 @@ db.serialize(() => {
       instructions: "1. Wash and chop vegetables\n2. Make dressing\n3. Toss and serve",
       mood: "refreshed",
       prep_time: 15,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegan"
     },
     {
       name: "Warm Apple Cinnamon Oatmeal",
@@ -91,7 +99,8 @@ db.serialize(() => {
       instructions: "1. Cook oats with milk\n2. Add chopped apple and cinnamon\n3. Top with honey and nuts",
       mood: "cozy",
       prep_time: 15,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegetarian"
     },
     {
       name: "Spicy Ramen Bowl",
@@ -99,7 +108,8 @@ db.serialize(() => {
       instructions: "1. Cook noodles\n2. Prepare spicy broth\n3. Add toppings and serve",
       mood: "adventurous",
       prep_time: 20,
-      difficulty: "medium"
+      difficulty: "medium",
+      dietary: "vegetarian"
     },
     {
       name: "Lemon Blueberry Muffins",
@@ -107,7 +117,8 @@ db.serialize(() => {
       instructions: "1. Mix dry and wet ingredients\n2. Fold in blueberries\n3. Bake until golden",
       mood: "cheerful",
       prep_time: 35,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegetarian"
     },
     {
       name: "Creamy Mushroom Risotto",
@@ -115,7 +126,8 @@ db.serialize(() => {
       instructions: "1. Sauté mushrooms and onions\n2. Add rice and wine\n3. Gradually add broth while stirring\n4. Finish with parmesan",
       mood: "cozy",
       prep_time: 40,
-      difficulty: "medium"
+      difficulty: "medium",
+      dietary: "vegetarian"
     },
     {
       name: "Mediterranean Quinoa Bowl",
@@ -123,7 +135,8 @@ db.serialize(() => {
       instructions: "1. Cook quinoa according to package\n2. Chop vegetables\n3. Mix with dressing and serve",
       mood: "refreshed",
       prep_time: 25,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegetarian"
     },
     {
       name: "Spicy Black Bean Tacos",
@@ -131,7 +144,8 @@ db.serialize(() => {
       instructions: "1. Sauté vegetables and beans with spices\n2. Warm tortillas\n3. Assemble with toppings",
       mood: "excited",
       prep_time: 20,
-      difficulty: "easy"
+      difficulty: "easy",
+      dietary: "vegan"
     }
   ];
 
@@ -141,9 +155,9 @@ db.serialize(() => {
       console.error('Error checking recipes:', err);
     } else if (row.count === 0) {
       // Insert sample recipes
-      const stmt = db.prepare("INSERT INTO recipes (name, ingredients, instructions, mood, prep_time, difficulty) VALUES (?, ?, ?, ?, ?, ?)");
+      const stmt = db.prepare("INSERT INTO recipes (name, ingredients, instructions, mood, prep_time, difficulty, dietary) VALUES (?, ?, ?, ?, ?, ?, ?)");
       sampleRecipes.forEach(recipe => {
-        stmt.run(recipe.name, recipe.ingredients, recipe.instructions, recipe.mood, recipe.prep_time, recipe.difficulty);
+        stmt.run(recipe.name, recipe.ingredients, recipe.instructions, recipe.mood, recipe.prep_time, recipe.difficulty, recipe.dietary);
       });
       stmt.finalize();
       console.log('Sample recipes inserted successfully');

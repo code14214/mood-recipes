@@ -9,6 +9,7 @@ const loadingSpinner = document.getElementById('loadingSpinner');
 const recipeTitle = document.getElementById('recipeTitle');
 const recipePrepTime = document.getElementById('recipePrepTime');
 const recipeDifficulty = document.getElementById('recipeDifficulty');
+const recipeDietary = document.getElementById('recipeDietary');
 const ingredientsList = document.getElementById('ingredientsList');
 const instructionsList = document.getElementById('instructionsList');
 const newRecipeBtn = document.getElementById('newRecipeBtn');
@@ -112,6 +113,20 @@ function displayRecipe(recipe) {
     };
     recipeDifficulty.className = `px-2 py-1 rounded-full text-xs font-medium ${difficultyColors[recipe.difficulty] || 'bg-gray-100 text-gray-800'}`;
     recipeDifficulty.textContent = recipe.difficulty;
+    
+    // Set dietary badge
+    const dietaryColors = {
+        'vegan': 'bg-green-100 text-green-800',
+        'vegetarian': 'bg-blue-100 text-blue-800',
+        'meat': 'bg-red-100 text-red-800'
+    };
+    const dietaryLabels = {
+        'vegan': '🌱 Vegan',
+        'vegetarian': '🥬 Vegetarian',
+        'meat': '🥩 Contains Meat'
+    };
+    recipeDietary.className = `px-2 py-1 rounded-full text-xs font-medium ${dietaryColors[recipe.dietary] || 'bg-gray-100 text-gray-800'}`;
+    recipeDietary.textContent = dietaryLabels[recipe.dietary] || recipe.dietary;
     
     // Display ingredients
     ingredientsList.innerHTML = '';
