@@ -112,30 +112,12 @@ db.serialize(() => {
       dietary: "vegetarian"
     },
     {
-      name: "Lemon Blueberry Muffins",
-      ingredients: "Flour, sugar, eggs, milk, lemon, blueberries, butter",
-      instructions: "1. Mix dry and wet ingredients\n2. Fold in blueberries\n3. Bake until golden",
-      mood: "cheerful",
-      prep_time: 35,
-      difficulty: "easy",
-      dietary: "vegetarian"
-    },
-    {
       name: "Creamy Mushroom Risotto",
       ingredients: "Arborio rice, mushrooms, vegetable broth, white wine, parmesan, butter, onion, garlic",
       instructions: "1. Sauté mushrooms and onions\n2. Add rice and wine\n3. Gradually add broth while stirring\n4. Finish with parmesan",
       mood: "cozy",
       prep_time: 40,
       difficulty: "medium",
-      dietary: "vegetarian"
-    },
-    {
-      name: "Mediterranean Quinoa Bowl",
-      ingredients: "Quinoa, cherry tomatoes, cucumber, olives, feta cheese, red onion, lemon, olive oil, herbs",
-      instructions: "1. Cook quinoa according to package\n2. Chop vegetables\n3. Mix with dressing and serve",
-      mood: "refreshed",
-      prep_time: 25,
-      difficulty: "easy",
       dietary: "vegetarian"
     },
     {
@@ -146,6 +128,51 @@ db.serialize(() => {
       prep_time: 20,
       difficulty: "easy",
       dietary: "vegan"
+    },
+    {
+      name: "Beef Wellington",
+      ingredients: "Beef tenderloin, puff pastry, mushrooms, shallots, garlic, prosciutto, Dijon mustard, egg wash, herbs",
+      instructions: "1. Sear beef tenderloin\n2. Prepare mushroom duxelles\n3. Wrap in prosciutto and puff pastry\n4. Brush with egg wash and bake",
+      mood: "romantic",
+      prep_time: 90,
+      difficulty: "hard",
+      dietary: "meat"
+    },
+    {
+      name: "Sushi Roll Masterpiece",
+      ingredients: "Sushi rice, nori, fresh fish, avocado, cucumber, wasabi, soy sauce, rice vinegar, bamboo mat",
+      instructions: "1. Prepare sushi rice with vinegar\n2. Lay nori on bamboo mat\n3. Spread rice and add fillings\n4. Roll tightly and slice",
+      mood: "adventurous",
+      prep_time: 75,
+      difficulty: "hard",
+      dietary: "meat"
+    },
+    {
+      name: "Croissants from Scratch",
+      ingredients: "Flour, butter, yeast, milk, sugar, salt, egg wash",
+      instructions: "1. Make dough and let rise\n2. Create butter layers\n3. Fold and roll multiple times\n4. Shape and bake until golden",
+      mood: "cheerful",
+      prep_time: 180,
+      difficulty: "hard",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Coq au Vin",
+      ingredients: "Chicken, red wine, bacon, mushrooms, pearl onions, garlic, herbs, butter, flour",
+      instructions: "1. Marinate chicken in wine\n2. Brown chicken and bacon\n3. Simmer with vegetables and wine\n4. Reduce sauce and serve",
+      mood: "cozy",
+      prep_time: 120,
+      difficulty: "hard",
+      dietary: "meat"
+    },
+    {
+      name: "Tiramisu",
+      ingredients: "Ladyfingers, mascarpone cheese, eggs, sugar, coffee, cocoa powder, vanilla, rum",
+      instructions: "1. Make coffee and cool\n2. Beat egg yolks with sugar\n3. Fold in mascarpone\n4. Layer with coffee-dipped ladyfingers",
+      mood: "romantic",
+      prep_time: 60,
+      difficulty: "hard",
+      dietary: "vegetarian"
     }
   ];
 

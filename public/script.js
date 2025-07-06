@@ -132,8 +132,16 @@ function displayRecipe(recipe) {
         'medium': 'bg-yellow-100 text-yellow-800',
         'hard': 'bg-red-100 text-red-800'
     };
+    const difficultyIcons = {
+        'easy': '🥄',
+        'medium': '🔪',
+        'hard': '👨‍🍳'
+    };
     recipeDifficulty.className = `px-2 py-1 rounded-full text-xs font-medium ${difficultyColors[recipe.difficulty] || 'bg-gray-100 text-gray-800'}`;
-    recipeDifficulty.textContent = recipe.difficulty;
+    recipeDifficulty.innerHTML = `
+        <span class="mr-1">${difficultyIcons[recipe.difficulty] || '🍽️'}</span>
+        ${recipe.difficulty}
+    `;
     
     // Set dietary badge
     const dietaryColors = {
