@@ -108,6 +108,30 @@ db.serialize(() => {
       mood: "cheerful",
       prep_time: 35,
       difficulty: "easy"
+    },
+    {
+      name: "Creamy Mushroom Risotto",
+      ingredients: "Arborio rice, mushrooms, vegetable broth, white wine, parmesan, butter, onion, garlic",
+      instructions: "1. Sauté mushrooms and onions\n2. Add rice and wine\n3. Gradually add broth while stirring\n4. Finish with parmesan",
+      mood: "cozy",
+      prep_time: 40,
+      difficulty: "medium"
+    },
+    {
+      name: "Mediterranean Quinoa Bowl",
+      ingredients: "Quinoa, cherry tomatoes, cucumber, olives, feta cheese, red onion, lemon, olive oil, herbs",
+      instructions: "1. Cook quinoa according to package\n2. Chop vegetables\n3. Mix with dressing and serve",
+      mood: "refreshed",
+      prep_time: 25,
+      difficulty: "easy"
+    },
+    {
+      name: "Spicy Black Bean Tacos",
+      ingredients: "Black beans, tortillas, bell peppers, onion, spices, lime, avocado, cilantro, hot sauce",
+      instructions: "1. Sauté vegetables and beans with spices\n2. Warm tortillas\n3. Assemble with toppings",
+      mood: "excited",
+      prep_time: 20,
+      difficulty: "easy"
     }
   ];
 

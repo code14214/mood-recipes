@@ -1,0 +1,34 @@
+# Globale Cursor Rules für alle Projekte
+
+## Automatische Git-Initialisierung für neue Projekte
+Wenn ein neues Projekt erstellt wird oder eine neue Workspace geöffnet wird:
+1. Prüfe, ob bereits ein .git-Verzeichnis existiert
+2. Falls nicht, initialisiere ein neues Git-Repository
+3. Erstelle eine .gitignore-Datei basierend auf der Projektart
+4. Erstelle einen initialen Commit
+
+## Git-Initialisierung für verschiedene Projekttypen
+- **Python-Projekte**: Füge Python-spezifische .gitignore-Regeln hinzu
+- **JavaScript/Node.js**: Füge node_modules, .env, etc. zur .gitignore hinzu
+- **Minecraft Addons**: Füge .mcpack, .mcaddon zur .gitignore hinzu
+- **Allgemeine Projekte**: Standard .gitignore mit OS-spezifischen Regeln
+
+## Automatische README-Erstellung
+Erstelle eine README.md-Datei mit:
+- Projektname (basierend auf Verzeichnisname)
+- Beschreibung
+- Installation/Setup-Anweisungen
+- Projektstruktur
+
+## Commit-Konventionen
+Verwende aussagekräftige Commit-Messages:
+- "Initial commit: [Projektname]"
+- "feat: [neue Funktion]"
+- "fix: [Bug-Behebung]"
+- "docs: [Dokumentation]"
+
+## Allgemeine Entwicklungsrichtlinien
+- Verwende aussagekräftige Variablen- und Funktionsnamen
+- Füge Kommentare zu komplexen Code-Stellen hinzu
+- Halte Funktionen kurz und fokussiert
+- Verwende konsistente Formatierung 
