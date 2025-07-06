@@ -1,10 +1,12 @@
 # 🍽️ Mood Recipe Finder
 
-A delightful web application that recommends recipes based on your current mood! Simply select how you're feeling, and get a perfectly matched recipe suggestion. Don't like the first suggestion? No problem - request another one!
+A delightful web application that recommends recipes based on your current mood! Simply select how you're feeling, and get a perfectly matched recipe suggestion with detailed information about preparation time, difficulty level, and dietary preferences.
 
 ## ✨ Features
 
 - **Mood-Based Recommendations**: Choose from 10 different moods (sad, happy, excited, anxious, sick, romantic, refreshed, cozy, adventurous, cheerful)
+- **Color-Coded Labels**: Visual indicators for cooking time, difficulty, and dietary preferences
+- **Balanced Recipe Collection**: 15 recipes evenly distributed across all difficulty levels
 - **Beautiful UI**: Modern, responsive design with Tailwind CSS
 - **Interactive Experience**: Smooth animations and hover effects
 - **Recipe Details**: Complete ingredients list and step-by-step instructions
@@ -79,6 +81,7 @@ The SQLite database contains a `recipes` table with:
 - `mood`: Associated mood category
 - `prep_time`: Preparation time in minutes
 - `difficulty`: Easy, medium, or hard
+- `dietary`: Vegan, vegetarian, or meat
 
 ## 🎨 Customization
 
@@ -93,7 +96,8 @@ You can add more recipes by modifying the `sampleRecipes` array in `server.js`:
   instructions: "1. First step\n2. Second step\n3. Third step",
   mood: "happy", // or any existing mood
   prep_time: 30,
-  difficulty: "easy" // easy, medium, or hard
+  difficulty: "easy", // easy, medium, or hard
+  dietary: "vegetarian" // vegan, vegetarian, or meat
 }
 ```
 
@@ -103,47 +107,57 @@ You can add more recipes by modifying the `sampleRecipes` array in `server.js`:
 2. Add recipes for that mood in `server.js`
 3. The mood will automatically appear in the UI
 
-## 🌟 Sample Recipes Included
+## 🌟 Recipe Collection
 
-The app comes with 10 sample recipes:
+The app comes with 15 carefully curated recipes:
+
+### Easy Recipes (🥄)
 - **Sad**: Comforting Mac and Cheese
 - **Happy**: Energizing Smoothie Bowl
+- **Sick**: Cozy Chicken Soup
+- **Refreshed**: Fresh Garden Salad
+- **Excited**: Spicy Black Bean Tacos
+
+### Medium Recipes (🔪)
 - **Excited**: Spicy Chicken Tacos
 - **Anxious**: Calming Chamomile Tea Cookies
-- **Sick**: Cozy Chicken Soup
 - **Romantic**: Chocolate Lava Cake
-- **Refreshed**: Fresh Garden Salad
-- **Cozy**: Warm Apple Cinnamon Oatmeal
 - **Adventurous**: Spicy Ramen Bowl
-- **Cheerful**: Lemon Blueberry Muffins
+- **Cozy**: Creamy Mushroom Risotto
+
+### Hard Recipes (👨‍🍳)
+- **Romantic**: Beef Wellington
+- **Adventurous**: Sushi Roll Masterpiece
+- **Cheerful**: Croissants from Scratch
+- **Cozy**: Coq au Vin
+- **Romantic**: Tiramisu
 
 ## 🔧 API Endpoints
 
 - `GET /api/moods` - Returns all available moods
-- `GET /api/recipes/:mood` - Returns a random recipe for the specified mood
+- `GET /api/recipes/:mood` - Returns a random recipe for the specified mood with full details including dietary info
 
 ## 🎉 Enjoy!
 
-The app is now ready to use! Select your mood and discover delicious recipes that match your feelings. Perfect for those moments when you're not sure what to cook but know exactly how you feel.
+The app is now ready to use! Select your mood and discover delicious recipes that match your feelings. Each recipe comes with helpful visual indicators for cooking time, difficulty level, and dietary preferences. Perfect for those moments when you're not sure what to cook but know exactly how you feel.
 
 ---
 
 *Built with ❤️ using Express, SQLite, and Tailwind CSS*
 
-## Recipe Distribution
+## 📊 Recipe Categories
 
+### Difficulty Levels
 - **🥄 Easy (5 recipes):** Simple recipes for beginners
 - **🔪 Medium (5 recipes):** Intermediate cooking skills required  
 - **👨‍🍳 Hard (5 recipes):** Advanced techniques and professional skills
 
-## Dietary Options
-
+### Dietary Preferences
 - **🌱 Vegan:** Plant-based recipes
 - **🥬 Vegetarian:** Contains dairy/eggs but no meat
 - **🥩 Contains Meat:** Meat-based recipes
 
-## Time Categories
-
+### Cooking Time
 - **🟢 Fast (0-15 min):** Quick and easy recipes
 - **🟡 Medium (16-30 min):** Moderate preparation time
 - **🟠 Slow (31+ min):** Longer cooking processes
