@@ -5,7 +5,11 @@ Wenn ein neues Projekt erstellt wird oder eine neue Workspace geöffnet wird:
 1. Prüfe, ob bereits ein .git-Verzeichnis existiert
 2. Falls nicht, initialisiere ein neues Git-Repository
 3. Erstelle eine .gitignore-Datei basierend auf der Projektart
-4. Erstelle einen initialen Commit
+4. Konfiguriere Git-Benutzer-Einstellungen für GitHub:
+   - Setze user.name auf den GitHub-Benutzernamen
+   - Setze user.email auf "[username]@users.noreply.github.com"
+   - Beispiel: git config user.email "code14214@users.noreply.github.com"
+5. Erstelle einen initialen Commit
 
 ## Git-Initialisierung für verschiedene Projekttypen
 - **Python-Projekte**: Füge Python-spezifische .gitignore-Regeln hinzu
