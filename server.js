@@ -173,6 +173,151 @@ db.serialize(() => {
       prep_time: 60,
       difficulty: "hard",
       dietary: "vegetarian"
+    },
+    // Additional recipes for more variety
+    {
+      name: "Warm Chocolate Chip Cookies",
+      ingredients: "Flour, butter, chocolate chips, sugar, eggs, vanilla, baking soda",
+      instructions: "1. Cream butter and sugar\n2. Mix in eggs and vanilla\n3. Add flour and chocolate chips\n4. Bake until golden",
+      mood: "sad",
+      prep_time: 25,
+      difficulty: "easy",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Grilled Cheese with Tomato Soup",
+      ingredients: "Bread, cheddar cheese, butter, tomatoes, cream, basil, garlic",
+      instructions: "1. Make grilled cheese sandwich\n2. Prepare tomato soup\n3. Serve together",
+      mood: "sad",
+      prep_time: 20,
+      difficulty: "easy",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Tropical Fruit Salad",
+      ingredients: "Pineapple, mango, papaya, coconut, lime, mint",
+      instructions: "1. Chop all fruits\n2. Mix with lime juice\n3. Garnish with mint",
+      mood: "happy",
+      prep_time: 15,
+      difficulty: "easy",
+      dietary: "vegan"
+    },
+    {
+      name: "Rainbow Smoothie",
+      ingredients: "Strawberries, orange, banana, spinach, almond milk, honey",
+      instructions: "1. Blend all ingredients\n2. Adjust sweetness if needed\n3. Serve immediately",
+      mood: "happy",
+      prep_time: 8,
+      difficulty: "easy",
+      dietary: "vegan"
+    },
+    {
+      name: "Spicy Korean BBQ Tacos",
+      ingredients: "Beef, tortillas, kimchi, gochujang, sesame oil, green onions",
+      instructions: "1. Marinate beef in Korean spices\n2. Grill beef to perfection\n3. Assemble with kimchi",
+      mood: "excited",
+      prep_time: 35,
+      difficulty: "medium",
+      dietary: "meat"
+    },
+    {
+      name: "Buffalo Chicken Wings",
+      ingredients: "Chicken wings, hot sauce, butter, blue cheese, celery",
+      instructions: "1. Season and bake wings\n2. Toss in buffalo sauce\n3. Serve with blue cheese dip",
+      mood: "excited",
+      prep_time: 45,
+      difficulty: "medium",
+      dietary: "meat"
+    },
+    {
+      name: "Lavender Chamomile Tea Cake",
+      ingredients: "Flour, butter, sugar, eggs, lavender, chamomile tea, vanilla",
+      instructions: "1. Infuse butter with lavender\n2. Mix cake batter\n3. Bake until springy",
+      mood: "anxious",
+      prep_time: 50,
+      difficulty: "medium",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Calming Oatmeal with Honey",
+      ingredients: "Oats, honey, cinnamon, banana, walnuts, milk",
+      instructions: "1. Cook oats with milk\n2. Add honey and cinnamon\n3. Top with banana and walnuts",
+      mood: "anxious",
+      prep_time: 12,
+      difficulty: "easy",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Healing Ginger Turmeric Tea",
+      ingredients: "Fresh ginger, turmeric, honey, lemon, hot water",
+      instructions: "1. Slice ginger and turmeric\n2. Steep in hot water\n3. Add honey and lemon",
+      mood: "sick",
+      prep_time: 10,
+      difficulty: "easy",
+      dietary: "vegan"
+    },
+    {
+      name: "Comforting Rice Pudding",
+      ingredients: "Rice, milk, sugar, vanilla, cinnamon, raisins",
+      instructions: "1. Cook rice with milk\n2. Add sugar and vanilla\n3. Stir in raisins and cinnamon",
+      mood: "sick",
+      prep_time: 30,
+      difficulty: "easy",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Strawberry Chocolate Fondue",
+      ingredients: "Dark chocolate, heavy cream, strawberries, marshmallows, graham crackers",
+      instructions: "1. Melt chocolate with cream\n2. Arrange dipping items\n3. Serve warm",
+      mood: "romantic",
+      prep_time: 15,
+      difficulty: "easy",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Citrus Mint Water",
+      ingredients: "Lemon, lime, orange, mint leaves, cold water",
+      instructions: "1. Slice citrus fruits\n2. Add mint leaves\n3. Refrigerate for 2 hours",
+      mood: "refreshed",
+      prep_time: 5,
+      difficulty: "easy",
+      dietary: "vegan"
+    },
+    {
+      name: "Green Goddess Bowl",
+      ingredients: "Quinoa, avocado, cucumber, edamame, lime, cilantro, olive oil",
+      instructions: "1. Cook quinoa\n2. Chop vegetables\n3. Mix with dressing",
+      mood: "refreshed",
+      prep_time: 25,
+      difficulty: "medium",
+      dietary: "vegan"
+    },
+    {
+      name: "Cinnamon Roll Pancakes",
+      ingredients: "Flour, milk, eggs, cinnamon, brown sugar, cream cheese, maple syrup",
+      instructions: "1. Make pancake batter\n2. Add cinnamon swirl\n3. Top with cream cheese glaze",
+      mood: "cozy",
+      prep_time: 30,
+      difficulty: "medium",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Thai Green Curry",
+      ingredients: "Coconut milk, green curry paste, vegetables, tofu, fish sauce, basil",
+      instructions: "1. Sauté curry paste\n2. Add coconut milk and vegetables\n3. Simmer until tender",
+      mood: "adventurous",
+      prep_time: 40,
+      difficulty: "medium",
+      dietary: "vegetarian"
+    },
+    {
+      name: "Lemon Poppy Seed Muffins",
+      ingredients: "Flour, sugar, eggs, milk, lemon, poppy seeds, butter",
+      instructions: "1. Mix dry ingredients\n2. Combine wet ingredients\n3. Bake until golden",
+      mood: "cheerful",
+      prep_time: 35,
+      difficulty: "medium",
+      dietary: "vegetarian"
     }
   ];
 
