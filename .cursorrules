@@ -35,4 +35,14 @@ Verwende aussagekräftige Commit-Messages:
 - Verwende aussagekräftige Variablen- und Funktionsnamen
 - Füge Kommentare zu komplexen Code-Stellen hinzu
 - Halte Funktionen kurz und fokussiert
-- Verwende konsistente Formatierung 
+- Verwende konsistente Formatierung
+
+## Vor jedem Commit
+- Prüfe, ob die README.md und die .gitignore aktuell sind und passe sie bei Bedarf an
+- Nach jedem Commit: Führe automatisch ein 'git push' ins Remote-Repository aus
+
+## Automatisches Server-Start
+Wenn der Nutzer "start" eingibt:
+- Bei Node.js Projekten: Führe `npm run dev` aus
+- Bei Python Projekten: Führe `python app.py` oder `flask run` aus
+- Bei anderen Projekttypen: Prüfe package.json für verfügbare Scripts 
