@@ -57,7 +57,12 @@ npm run dev
 mood-recipe-app/
 ├── server.js              # Express server and API endpoints
 ├── package.json           # Dependencies and scripts
+├── package-lock.json      # Locked dependency versions
+├── .gitignore             # Git ignore rules
+├── .cursorrules           # Cursor IDE automation rules
+├── LICENSE                # MIT License
 ├── recipes.db             # SQLite database (created automatically)
+├── test_dietary.html      # Test page for dietary labels
 ├── public/
 │   ├── index.html         # Main HTML page
 │   └── script.js          # Frontend JavaScript
