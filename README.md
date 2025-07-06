@@ -6,7 +6,7 @@ A delightful web application that recommends recipes based on your current mood!
 
 - **Mood-Based Recommendations**: Choose from 10 different moods (sad, happy, excited, anxious, sick, romantic, refreshed, cozy, adventurous, cheerful)
 - **Color-Coded Labels**: Visual indicators for cooking time, difficulty, and dietary preferences
-- **Balanced Recipe Collection**: 15 recipes evenly distributed across all difficulty levels
+- **Expanded Recipe Collection**: 30 recipes with multiple options for each mood
 - **Beautiful UI**: Modern, responsive design with Tailwind CSS
 - **Interactive Experience**: Smooth animations and hover effects
 - **Recipe Details**: Complete ingredients list and step-by-step instructions
@@ -109,28 +109,31 @@ You can add more recipes by modifying the `sampleRecipes` array in `server.js`:
 
 ## 🌟 Recipe Collection
 
-The app comes with 15 carefully curated recipes:
+The app comes with 30 carefully curated recipes:
 
 ### Easy Recipes (🥄)
-- **Sad**: Comforting Mac and Cheese
-- **Happy**: Energizing Smoothie Bowl
-- **Sick**: Cozy Chicken Soup
-- **Refreshed**: Fresh Garden Salad
+- **Sad**: Comforting Mac and Cheese, Warm Chocolate Chip Cookies, Grilled Cheese with Tomato Soup
+- **Happy**: Energizing Smoothie Bowl, Tropical Fruit Salad, Rainbow Smoothie
+- **Sick**: Cozy Chicken Soup, Healing Ginger Turmeric Tea, Comforting Rice Pudding
+- **Refreshed**: Fresh Garden Salad, Citrus Mint Water
 - **Excited**: Spicy Black Bean Tacos
+- **Anxious**: Calming Oatmeal with Honey
+- **Romantic**: Strawberry Chocolate Fondue
 
 ### Medium Recipes (🔪)
-- **Excited**: Spicy Chicken Tacos
-- **Anxious**: Calming Chamomile Tea Cookies
+- **Excited**: Spicy Chicken Tacos, Spicy Korean BBQ Tacos, Buffalo Chicken Wings
+- **Anxious**: Calming Chamomile Tea Cookies, Lavender Chamomile Tea Cake
 - **Romantic**: Chocolate Lava Cake
-- **Adventurous**: Spicy Ramen Bowl
-- **Cozy**: Creamy Mushroom Risotto
+- **Adventurous**: Spicy Ramen Bowl, Thai Green Curry
+- **Cozy**: Creamy Mushroom Risotto, Cinnamon Roll Pancakes
+- **Refreshed**: Green Goddess Bowl
+- **Cheerful**: Lemon Poppy Seed Muffins
 
 ### Hard Recipes (👨‍🍳)
-- **Romantic**: Beef Wellington
+- **Romantic**: Beef Wellington, Tiramisu
 - **Adventurous**: Sushi Roll Masterpiece
 - **Cheerful**: Croissants from Scratch
 - **Cozy**: Coq au Vin
-- **Romantic**: Tiramisu
 
 ## 🔧 API Endpoints
 
@@ -148,9 +151,9 @@ The app is now ready to use! Select your mood and discover delicious recipes tha
 ## 📊 Recipe Categories
 
 ### Difficulty Levels
-- **🥄 Easy (5 recipes):** Simple recipes for beginners
-- **🔪 Medium (5 recipes):** Intermediate cooking skills required  
-- **👨‍🍳 Hard (5 recipes):** Advanced techniques and professional skills
+- **🥄 Easy (10 recipes):** Simple recipes for beginners
+- **🔪 Medium (12 recipes):** Intermediate cooking skills required  
+- **👨‍🍳 Hard (8 recipes):** Advanced techniques and professional skills
 
 ### Dietary Preferences
 - **🌱 Vegan:** Plant-based recipes
