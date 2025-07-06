@@ -128,4 +128,30 @@ The app is now ready to use! Select your mood and discover delicious recipes tha
 
 ---
 
-*Built with ❤️ using Express, SQLite, and Tailwind CSS* 
+*Built with ❤️ using Express, SQLite, and Tailwind CSS*
+
+## Recipe Distribution
+
+- **🥄 Easy (5 recipes):** Simple recipes for beginners
+- **🔪 Medium (5 recipes):** Intermediate cooking skills required  
+- **👨‍🍳 Hard (5 recipes):** Advanced techniques and professional skills
+
+## Dietary Options
+
+- **🌱 Vegan:** Plant-based recipes
+- **🥬 Vegetarian:** Contains dairy/eggs but no meat
+- **🥩 Contains Meat:** Meat-based recipes
+
+## Time Categories
+
+- **🟢 Fast (0-15 min):** Quick and easy recipes
+- **🟡 Medium (16-30 min):** Moderate preparation time
+- **🟠 Slow (31+ min):** Longer cooking processes
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+---
+
+*Last updated: December 2024* 
