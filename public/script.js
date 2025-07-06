@@ -103,7 +103,28 @@ function displayRecipe(recipe) {
     
     // Update recipe title and metadata
     recipeTitle.textContent = recipe.name;
-    recipePrepTime.textContent = `${recipe.prep_time} minutes`;
+    
+    // Set prep time badge with color coding
+    const prepTimeColors = {
+        'fast': 'bg-green-100 text-green-800',      // 0-15 minutes
+        'medium': 'bg-yellow-100 text-yellow-800',  // 16-30 minutes
+        'slow': 'bg-orange-100 text-orange-800'     // 31+ minutes
+    };
+    
+    let prepTimeCategory = 'medium';
+    if (recipe.prep_time <= 15) {
+        prepTimeCategory = 'fast';
+    } else if (recipe.prep_time > 30) {
+        prepTimeCategory = 'slow';
+    }
+    
+    recipePrepTime.className = `px-2 py-1 rounded-full text-xs font-medium ${prepTimeColors[prepTimeCategory]}`;
+    recipePrepTime.innerHTML = `
+        <svg class="w-3 h-3 inline mr-1 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        ${recipe.prep_time} min
+    `;
     
     // Set difficulty badge
     const difficultyColors = {
